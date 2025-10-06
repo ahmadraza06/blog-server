@@ -1,8 +1,10 @@
 
 //import mongoose from 'mongoose';
 import express from 'express'
+import dotenv from 'dotenv'
 
-const url = 'http://localhost:8000'
+dotenv.config();
+const url = process.env.DB_URL ;
 // export const uploadImage = (req,res)=>{
     
 //     if(!req.file){
