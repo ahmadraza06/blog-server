@@ -6,6 +6,7 @@ import cors from 'cors'
 import bodyParser from 'body-parser';
 
 
+dotenv.config();
 const app = express();
 await connectDb();
 
@@ -18,7 +19,7 @@ app.use('/',router);
 //     res.send("hello world")
 // })
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, ()=>{
     console.log(`Server is running successfully at PORT ${PORT}`)
